@@ -31,6 +31,8 @@ function MiAPI() {
 
         const filteredData = data.filter(pokemon => pokemon.name.toLowerCase().includes(query.toLowerCase()))
 
+        const sortedData =filteredData.sort((a,b) => a.name.localeCompare(b.name))
+
         if (loading) {
             return ( <div>loading</div>)
         }
